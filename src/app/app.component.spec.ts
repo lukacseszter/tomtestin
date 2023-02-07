@@ -1,3 +1,13 @@
+/*
+* File: app.component.spec.ts
+* Author: Lukács Eszter
+* Copyright: 2023, Lukács Eszter
+* Group: Szoft II N
+* Date: 2023-02-07
+* Github: https://github.com/lukacseszter/
+* Licenc: GNU GPL
+*/
+
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
