@@ -9,6 +9,7 @@
 */
 
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -17,9 +18,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  weightone !: FormGroup;
+  weighttwo !: number;
 
   ngOnInit(): void {
+    this.weightone = new FormGroup({
+      weight: new FormControl(0),
+      height: new FormControl(0)
+    });
   }
 
+  getweightone() {
+    const {weight, height} = this.weightone.value;
+    this.weighttwo = weight / Math.pow(height, 2);
+  }
+
+  onKeyup(event: any) {
+    console.log(event.key);
+    if (event.key === "Enter")
+    {console.log("Gomb megnyomásra került")};
+  }
 }
+
+
